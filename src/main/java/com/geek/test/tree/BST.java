@@ -1,17 +1,9 @@
 package com.geek.test.tree;
 
-public class BST {
+import static com.geek.test.tree.TreeUtil.insertNode;
+import static com.geek.test.tree.TreeUtil.print2D;
 
-    private static Node insertNode(Node node, int data) {
-        if (node == null) {
-            node = new Node(data);
-        } else if (data <= node.getData()) {
-            node.setLeft(insertNode(node.getLeft(), data));
-        } else {
-            node.setRight(insertNode(node.getRight(), data));
-        }
-        return node;
-    }
+public class BST {
 
     private static boolean search(Node root, int data) {
         if (root == null)
@@ -61,7 +53,7 @@ public class BST {
         node = insertNode(node, 42);
         insertNode(node, 4);
 
-        PrintTreeUtil.print2D(root);
+        print2D(root);
 
         System.out.println(search(root, 50));
         System.out.println(search(root, 44));

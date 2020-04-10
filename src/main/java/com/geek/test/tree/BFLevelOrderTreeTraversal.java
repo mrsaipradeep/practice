@@ -3,6 +3,9 @@ package com.geek.test.tree;
 import java.util.LinkedList;
 import java.util.Queue;
 
+import static com.geek.test.tree.TreeUtil.insertNode;
+import static com.geek.test.tree.TreeUtil.print2D;
+
 // Breadth first search
 public class BFLevelOrderTreeTraversal {
 
@@ -17,18 +20,8 @@ public class BFLevelOrderTreeTraversal {
         node = insertNode(node, 42);
         insertNode(node, 4);
 
-        PrintTreeUtil.print2D(root);
+        print2D(root);
         levelOrder(root);
-    }
-
-    private static Node insertNode(Node root, int data) {
-        if (root == null)
-            root = new Node(data);
-        else if (data <= root.getData())
-            root.setLeft(insertNode(root.getLeft(), data));
-        else
-            root.setRight(insertNode(root.getRight(), data));
-        return root;
     }
 
     private static void levelOrder(Node root) {

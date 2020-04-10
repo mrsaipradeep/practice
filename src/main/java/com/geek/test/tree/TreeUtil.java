@@ -1,7 +1,18 @@
 package com.geek.test.tree;
 
-class PrintTreeUtil {
+class TreeUtil {
     private static final int COUNT = 5;
+
+    static Node insertNode(Node node, int data) {
+        if (node == null) {
+            node = new Node(data);
+        } else if (data <= node.getData()) {
+            node.setLeft(insertNode(node.getLeft(), data));
+        } else {
+            node.setRight(insertNode(node.getRight(), data));
+        }
+        return node;
+    }
 
     // Function to print binary tree in 2D
     // It does reverse inorder traversal
@@ -28,7 +39,7 @@ class PrintTreeUtil {
     }
 
     // Wrapper over print2DUtil()
-    public static void print2D(Node root) {
+    static void print2D(Node root) {
         // Pass initial space count as 0
         print2DUtil(root, 0);
     }

@@ -6,31 +6,31 @@ public class Node {
     private Node left;
     private Node right;
 
-    public Node(int data) {
+    Node(int data) {
         this.data = data;
     }
 
-    public int getData() {
+    int getData() {
         return data;
     }
 
-    public void setData(int data) {
+    void setData(int data) {
         this.data = data;
     }
 
-    public Node getLeft() {
+    Node getLeft() {
         return left;
     }
 
-    public void setLeft(Node left) {
+    void setLeft(Node left) {
         this.left = left;
     }
 
-    public Node getRight() {
+    Node getRight() {
         return right;
     }
 
-    public void setRight(Node right) {
+    void setRight(Node right) {
         this.right = right;
     }
 
