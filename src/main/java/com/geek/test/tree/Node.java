@@ -3,8 +3,8 @@ package com.geek.test.tree;
 public class Node {
 
     private int data;
-    private Node left;
-    private Node right;
+    Node left;
+    Node right;
 
     Node(int data) {
         this.data = data;

@@ -12,24 +12,8 @@ public class MergeSortRevision {
 
     private static void mergeSort(int[] arr) {
         int n = arr.length;
-        int mid = n / 2;
+        int mid = arr.length/2;
 
-        if(n < 2)
-            return;
-
-        int left[] = new int[mid];
-        int right[] = new int[n - mid];
-
-        for (int i = 0; i <= mid - 1; i++) {
-            left[i] = arr[i];
-        }
-
-        for (int i = mid; i <= n - 1; i++) {
-            right[i - mid] = arr[i];
-        }
-        mergeSort(left);
-        mergeSort(right);
-        merge(left, right, arr);
 
     }
 
